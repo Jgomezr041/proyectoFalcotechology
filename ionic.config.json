@@ -1,0 +1,7 @@
+{
+  "name": "falcotecnology",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}

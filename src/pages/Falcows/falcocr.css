@@ -1,0 +1,38 @@
+.content{
+  --background-size: 100% 100%;
+  --background-position: 0px 0px;
+  --background: linear-gradient(59deg, #381FE2FF 3%, #71C4FFFF 100%);
+
+
+}
+
+.formulaa {
+  width: 100%;
+    max-width: 600px;
+background: #fff;
+    
+    margin: 0 auto;
+    padding: 2rem;
+   
+    border: 5px solid #120c6d;
+    border-radius: 3%;
+}
+
+/* Style the form inputs */
+
+
+/* Style the submit button */
+.submit-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Style the submit button on hover */
+.submit-button:hover {
+  background-color: #0056b3;
+}

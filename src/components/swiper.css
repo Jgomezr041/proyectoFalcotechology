@@ -1,0 +1,40 @@
+/* Contenedor del carrusel */
+.swiper-container {
+    width: 100%; /* Ajusta el ancho según tus necesidades */
+    height: 300px; /* Ajusta la altura según tus necesidades */
+    margin-top: 5%; /* Ajusta el margen superior según tus necesidades */
+  }
+  
+  /* Diapositivas del carrusel */
+  .swiper-slide {
+    width: auto; /* Ajusta el ancho de las diapositivas según tu diseño */
+    flex-shrink: 0; /* Evita que las diapositivas se reduzcan para ajustarse al contenedor */
+  }
+  
+  /* Contenedor de las diapositivas */
+  .swiper-wrapper {
+    display: flex; /* Permite que las diapositivas se desplacen horizontalmente */
+    align-items: center; /* Ajusta la alineación vertical según tus necesidades */
+    justify-content: center; /* Ajusta la alineación horizontal según tus necesidades */
+  }
+  @media only screen and (max-width: 668px ) {
+    /* Contenedor del carrusel */
+.swiper-container {
+  width: 100%; /* Ajusta el ancho según tus necesidades */
+  height: 300px; /* Ajusta la altura según tus necesidades */
+  margin-top: 5%; /* Ajusta el margen superior según tus necesidades */
+}
+
+/* Diapositivas del carrusel */
+.swiper-slide {
+  width: auto; /* Ajusta el ancho de las diapositivas según tu diseño */
+  flex-shrink: 0; /* Evita que las diapositivas se reduzcan para ajustarse al contenedor */
+}
+
+/* Contenedor de las diapositivas */
+.swiper-wrapper {
+  display: flex; /* Permite que las diapositivas se desplacen horizontalmente */
+  align-items: center; /* Ajusta la alineación vertical según tus necesidades */
+  justify-content: center; /* Ajusta la alineación horizontal según tus necesidades */
+}
+  }
