@@ -1,0 +1,175 @@
+[gd_scene load_steps=28 format=3 uid="uid://dqkrbn76wcaw1"]
+
+[ext_resource type="Script" path="res://personaje/character_body_2d.gd" id="1_lac03"]
+[ext_resource type="Texture2D" uid="uid://cba88iobkdcqp" path="res://Imagenes/personaje/parado/parado1.png" id="2_jt657"]
+[ext_resource type="Texture2D" uid="uid://bavlg4l8g5k4g" path="res://Imagenes/personaje/caer/idle.png" id="2_mrbbo"]
+[ext_resource type="Texture2D" uid="uid://ce0r4mlobag65" path="res://Imagenes/personaje/parado/parado2.png" id="3_7kg25"]
+[ext_resource type="Texture2D" uid="uid://4ikb7m7h0nca" path="res://Imagenes/personaje/parado/parado3.png" id="4_s8lf7"]
+[ext_resource type="Texture2D" uid="uid://ri1tjbjg3tl8" path="res://Imagenes/personaje/parado/parado4.png" id="5_ctht5"]
+[ext_resource type="Texture2D" uid="uid://ijwlcgypacb5" path="res://Imagenes/personaje/parado/parado5.png" id="6_aqgpa"]
+[ext_resource type="Texture2D" uid="uid://2upyxj3wk0f2" path="res://Imagenes/personaje/saltar/Jump 01.png" id="7_5rkx4"]
+[ext_resource type="Texture2D" uid="uid://bfrvgqub41k3j" path="res://Imagenes/personaje/saltar/Jump 02.png" id="8_uf361"]
+[ext_resource type="Texture2D" uid="uid://bh78b4f0knj83" path="res://Imagenes/personaje/saltar/Jump 03.png" id="9_d8q6e"]
+[ext_resource type="Texture2D" uid="uid://dksowhc2rvvvl" path="res://Imagenes/personaje/correr/Run 01.png" id="10_53dbo"]
+[ext_resource type="Texture2D" uid="uid://c4rkvk3ge3jjh" path="res://Imagenes/personaje/correr/Run 02.png" id="11_38kx8"]
+[ext_resource type="Texture2D" uid="uid://dh0b0wpax7tlt" path="res://Imagenes/personaje/correr/Run 03.png" id="12_qurbm"]
+[ext_resource type="Texture2D" uid="uid://d0ybluihjmmnu" path="res://Imagenes/personaje/correr/Run 04.png" id="13_iiyv2"]
+[ext_resource type="Texture2D" uid="uid://du8r483ysbc0t" path="res://Imagenes/personaje/correr/Run 05.png" id="14_22qh2"]
+[ext_resource type="Texture2D" uid="uid://3f5k370i2s5n" path="res://Imagenes/personaje/correr/Run 06.png" id="15_6xcdu"]
+[ext_resource type="Texture2D" uid="uid://fn4dxehoqo7v" path="res://Imagenes/personaje/atacar/Attack 1 01.png" id="17_spa8q"]
+[ext_resource type="Texture2D" uid="uid://hu3ayyqkeeny" path="res://Imagenes/personaje/atacar/Attack 1 02.png" id="18_2oelj"]
+[ext_resource type="Texture2D" uid="uid://bh05oqp3tsosd" path="res://Imagenes/personaje/atacar/Attack 1 03.png" id="19_vje57"]
+[ext_resource type="Texture2D" uid="uid://cny3rnfuy6d4e" path="res://Imagenes/personaje/atacar/Attack 1 04.png" id="20_n2tlf"]
+[ext_resource type="Texture2D" uid="uid://vfgwun52rb6n" path="res://Imagenes/personaje/atacar/Attack 1 05.png" id="21_tl8pk"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vbfjt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_mrbbo")
+}],
+"loop": true,
+"name": &"fall",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_jt657")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_7kg25")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_s8lf7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ctht5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_aqgpa")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_5rkx4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_uf361")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_d8q6e")
+}],
+"loop": false,
+"name": &"jump",
+"speed": 10.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_53dbo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_38kx8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_qurbm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_iiyv2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_22qh2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_6xcdu")
+}],
+"loop": true,
+"name": &"run",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sisc5"]
+size = Vector2(16, 20)
+
+[sub_resource type="Animation" id="Animation_0fy25"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("17_spa8q")]
+}
+
+[sub_resource type="Animation" id="Animation_lfbi7"]
+resource_name = "atacar"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("17_spa8q"), ExtResource("18_2oelj"), ExtResource("19_vje57"), ExtResource("20_n2tlf"), ExtResource("21_tl8pk")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bbnnw"]
+_data = {
+"RESET": SubResource("Animation_0fy25"),
+"atacar": SubResource("Animation_lfbi7")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p8tr3"]
+size = Vector2(17, 6)
+
+[node name="CharacterBody2D" type="CharacterBody2D" groups=["player"]]
+script = ExtResource("1_lac03")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(112, 148)
+sprite_frames = SubResource("SpriteFrames_vbfjt")
+animation = &"idle"
+frame_progress = 0.637428
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(111, 146)
+shape = SubResource("RectangleShape2D_sisc5")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+texture = ExtResource("17_spa8q")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_bbnnw")
+}
+speed_scale = 2.0
+
+[node name="attack" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="attack"]
+position = Vector2(18.5, 4)
+shape = SubResource("RectangleShape2D_p8tr3")
+disabled = true
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="body_entered" from="attack" to="." method="_on_attack_body_entered"]

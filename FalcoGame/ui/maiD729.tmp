@@ -1,0 +1,47 @@
+[gd_scene load_steps=4 format=3 uid="uid://btohffvttueqh"]
+
+[ext_resource type="Script" path="res://ui/main.gd" id="1_j3526"]
+[ext_resource type="Texture2D" uid="uid://pe5fwsv0tjv2" path="res://assets/grass.png" id="1_vjt35"]
+[ext_resource type="Texture2D" uid="uid://dnnx54j3ijf6u" path="res://assets/intro.png" id="2_ljqd4"]
+
+[node name="main" type="Node2D"]
+script = ExtResource("1_j3526")
+
+[node name="background" type="TextureRect" parent="."]
+offset_right = 430.0
+offset_bottom = 932.0
+texture = ExtResource("1_vjt35")
+
+[node name="ImageIntro" type="TextureRect" parent="."]
+offset_left = 318.0
+offset_top = 819.0
+offset_right = 432.0
+offset_bottom = 934.0
+texture = ExtResource("2_ljqd4")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 22.0
+offset_top = 271.0
+offset_right = 425.0
+offset_bottom = 484.0
+theme_override_font_sizes/font_size = 50
+text = "FalcoGame
+BY
+FalcoTechnology"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 94.0
+offset_top = 555.0
+offset_right = 355.0
+offset_bottom = 713.0
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Play Now!!"
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Exit"
