@@ -134,7 +134,7 @@ size = Vector2(14, 14)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_avd4b"]
 size = Vector2(20, 14)
 
-[node name="pig" type="CharacterBody2D" groups=["ene"]]
+[node name="enemy" type="CharacterBody2D" groups=["ene"]]
 texture_filter = 1
 script = ExtResource("1_vrbxr")
 

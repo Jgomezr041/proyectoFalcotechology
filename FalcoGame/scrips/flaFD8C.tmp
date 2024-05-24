@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://c11jvkhxeknlw"]
+
+[ext_resource type="Script" path="res://scrips/Flag.gd" id="1_a1cmy"]
+[ext_resource type="Texture2D" uid="uid://cdgr1drat0x16" path="res://Imagenes/imagen.png" id="2_whqmm"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_82fkc"]
+radius = 28.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ncsll"]
+atlas = ExtResource("2_whqmm")
+region = Rect2(0, 0, 400, 400)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ena5m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ncsll")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"tap",
+"speed": 5.0
+}]
+
+[node name="Flag" type="Area2D"]
+script = ExtResource("1_a1cmy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(11, 1)
+shape = SubResource("CircleShape2D_82fkc")
+
+[node name="Flaganimated" type="AnimatedSprite2D" parent="."]
+position = Vector2(10, 1)
+scale = Vector2(0.164531, 0.159219)
+sprite_frames = SubResource("SpriteFrames_ena5m")
+animation = &"idle"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
