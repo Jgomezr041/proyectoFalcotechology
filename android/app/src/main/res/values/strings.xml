@@ -1,7 +1,0 @@
-<?xml version='1.0' encoding='utf-8'?>
-<resources>
-    <string name="app_name">falcotecnology</string>
-    <string name="title_activity_main">falcotecnology</string>
-    <string name="package_name">ionic.falcotecnology</string>
-    <string name="custom_url_scheme">ionic.falcotecnology</string>
-</resources>
